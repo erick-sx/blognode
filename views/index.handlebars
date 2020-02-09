@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao Blog do Node</h1>
+  <p class="lead">EAI GALERO, tudo bão? ESSE É UM BLOG DESENVOLVIDO EM NODE+EXPRESS+MONGO E NÃO FOI FÁCIL -nem rápido-, VALEU?</p>
+  <hr class="my-4">
+  <p>E AGORA TEM QUE EDITAR, TÁ TUDO PRONTO NO BACK, FALTA DEIXAR O FRONT MAIS BONITO E AMIGÁVEL, MAS TA NICE. bjos de luz</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+</div>
+
+<hr>
+
+<h2>Postagens Recentes: </h2>
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        
+        <h3> {{titulo}} </h3>
+        <small> {{descricao}} </small>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small><br>
+        <small>Data de publicação: {{data}} </small>
+        
+    </div>
+</div>
+{{else}}
+    <h5>Nenhuma postagem</h5>
+{{/each}}
